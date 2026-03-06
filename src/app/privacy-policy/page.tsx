@@ -158,8 +158,14 @@ export default function PrivacyPolicy() {
             <li>The right to data portability</li>
           </ul>
           <p className="mt-3">
-            To exercise any of these rights, please contact us at
-            privacy@calcwise.com.
+            To exercise any of these rights, please{" "}
+            <a
+              href="/contact"
+              className="text-[var(--color-primary)] underline"
+            >
+              contact us
+            </a>
+            .
           </p>
         </section>
 
@@ -205,11 +211,15 @@ export default function PrivacyPolicy() {
             9. Contact Us
           </h2>
           <p>
-            If you have questions about this Privacy Policy, please contact us
-            at:
-          </p>
-          <p className="mt-2">
-            <strong>Email:</strong> privacy@calcwise.com
+            If you have questions about this Privacy Policy, please reach out
+            through our{" "}
+            <a
+              href="/contact"
+              className="text-[var(--color-primary)] underline"
+            >
+              contact form
+            </a>
+            .
           </p>
         </section>
       </div>

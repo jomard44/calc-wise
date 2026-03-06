@@ -181,8 +181,15 @@ export default function TermsOfService() {
             12. Contact Us
           </h2>
           <p>
-            If you have questions about these Terms of Service, please contact
-            us at: legal@calcwise.com
+            If you have questions about these Terms of Service, please reach out
+            through our{" "}
+            <a
+              href="/contact"
+              className="text-[var(--color-primary)] underline"
+            >
+              contact form
+            </a>
+            .
           </p>
         </section>
       </div>

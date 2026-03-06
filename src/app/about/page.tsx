@@ -133,14 +133,16 @@ export default function About() {
           </h2>
           <p>
             Have a question, suggestion, or found an error? We&apos;d love to
-            hear from you:
+            hear from you. Use our contact form to get in touch — we typically
+            respond within 24–48 hours.
           </p>
-          <p className="mt-2">
-            <strong>General Inquiries:</strong> hello@calcwise.com
-            <br />
-            <strong>Privacy Questions:</strong> privacy@calcwise.com
-            <br />
-            <strong>Partnerships:</strong> partners@calcwise.com
+          <p className="mt-4">
+            <a
+              href="/contact"
+              className="inline-block bg-[var(--color-primary)] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[var(--color-primary)]/90 transition-colors"
+            >
+              Contact Us →
+            </a>
           </p>
         </section>
       </div>
