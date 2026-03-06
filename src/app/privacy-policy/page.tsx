@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
             &quot;us&quot;). We respect your privacy and are committed to
             protecting your personal information. This Privacy Policy explains
             how we collect, use, disclose, and safeguard your information when
-            you visit our website calcwise.com (the &quot;Site&quot;).
+            you visit our website calcwise.site (the &quot;Site&quot;).
           </p>
           <p>
             Please read this privacy policy carefully. If you do not agree with

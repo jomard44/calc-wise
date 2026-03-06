@@ -18,13 +18,13 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://calcwise.com",
+        item: "https://calcwise.site",
       },
       ...items.map((item, i) => ({
         "@type": "ListItem",
         position: i + 2,
         name: item.name,
-        ...(item.href ? { item: `https://calcwise.com${item.href}` } : {}),
+        ...(item.href ? { item: `https://calcwise.site${item.href}` } : {}),
       })),
     ],
   };

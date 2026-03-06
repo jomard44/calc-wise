@@ -35,11 +35,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "CalcWise" }],
   creator: "CalcWise",
-  metadataBase: new URL("https://calcwise.com"),
+  metadataBase: new URL("https://calcwise.site"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://calcwise.com",
+    url: "https://calcwise.site",
     siteName: "CalcWise",
     title: "CalcWise — Free Online Finance Calculators & Tools",
     description:

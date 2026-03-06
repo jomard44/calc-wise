@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { calculators, categories } from "@/lib/calculators";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://calcwise.com";
+  const baseUrl = "https://calcwise.site";
 
   const staticPages = [
     {
