@@ -47,6 +47,12 @@ export default function Header() {
                 {cat.name}
               </Link>
             ))}
+            <Link
+              href="/contact"
+              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10 transition-colors"
+            >
+              Contact
+            </Link>
           </nav>
 
           {/* Mobile hamburger */}
@@ -94,6 +100,13 @@ export default function Header() {
               {cat.name}
             </Link>
           ))}
+          <Link
+            href="/contact"
+            className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10"
+            onClick={() => setMobileOpen(false)}
+          >
+            Contact
+          </Link>
         </nav>
       )}
     </header>
