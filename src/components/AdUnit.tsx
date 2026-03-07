@@ -1,37 +1,55 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
+declare global {
+  interface Window {
+    adsbygoogle: Record<string, unknown>[];
+  }
+}
+
 interface AdUnitProps {
   slot: string;
   format?: "auto" | "rectangle" | "horizontal" | "vertical";
   className?: string;
 }
 
-/**
- * Google AdSense ad unit placeholder.
- * Replace data-ad-slot values with your actual AdSense ad unit IDs.
- * The ad-unit class provides a visual placeholder during development.
- */
 export default function AdUnit({
   slot,
   format = "auto",
   className = "",
 }: AdUnitProps) {
+  const adRef = useRef<HTMLModElement>(null);
+  const pushed = useRef(false);
+
+  useEffect(() => {
+    // Only push once per mount and only if consent was given
+    const consent = localStorage.getItem("calcwise-cookie-consent");
+    if (consent !== "accepted") return;
+    if (pushed.current) return;
+
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+      pushed.current = true;
+    } catch {
+      // AdSense not loaded yet — silently ignore
+    }
+  }, []);
+
   return (
     <div className={`my-4 ${className}`}>
-      <div
-        className="ad-unit"
-        style={{ minHeight: format === "rectangle" ? 250 : 90 }}
-      >
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block" }}
-          data-ad-client="ca-pub-9587370950538764"
-          data-ad-slot={slot}
-          data-ad-format={format}
-          data-full-width-responsive="true"
-        />
-        <span className="text-xs text-gray-400">Advertisement</span>
-      </div>
+      <ins
+        ref={adRef}
+        className="adsbygoogle"
+        style={{
+          display: "block",
+          minHeight: format === "rectangle" ? 250 : 90,
+        }}
+        data-ad-client="ca-pub-9587370950538764"
+        data-ad-slot={slot}
+        data-ad-format={format}
+        data-full-width-responsive="true"
+      />
     </div>
   );
 }

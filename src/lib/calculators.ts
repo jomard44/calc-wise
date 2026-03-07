@@ -12,6 +12,7 @@ export interface Category {
   slug: string;
   description: string;
   icon: string;
+  longDescription?: string;
 }
 
 export const categories: Category[] = [
@@ -21,6 +22,8 @@ export const categories: Category[] = [
     description:
       "Calculate mortgage payments, affordability, refinancing, and amortization schedules.",
     icon: "🏠",
+    longDescription:
+      "Buying a home is one of the biggest financial decisions you'll ever make. Our mortgage calculators help you understand exactly what you can afford, how much your monthly payments will be, and whether refinancing makes sense. Whether you're a first-time homebuyer comparing 15-year vs. 30-year terms, or a homeowner considering a refinance to lock in a lower rate, these tools give you the numbers you need. Enter your home price, down payment, interest rate, and loan term to see a detailed breakdown of principal, interest, taxes, and insurance — plus a full amortization schedule showing how your balance decreases over time.",
   },
   {
     name: "Loan Calculators",
@@ -28,6 +31,8 @@ export const categories: Category[] = [
     description:
       "Calculate auto loans, personal loans, student loans, and debt payoff strategies.",
     icon: "💳",
+    longDescription:
+      "From financing a car to consolidating credit card debt, loans are a common part of personal finance. Our loan calculators help you compare interest rates, estimate monthly payments, and figure out the true cost of borrowing. Use the auto loan calculator to see how different down payments and terms affect your monthly bill, or try the credit card payoff calculator to find out how long it will take to become debt-free. Understanding the total interest you'll pay over the life of a loan empowers you to negotiate better terms and save thousands of dollars.",
   },
   {
     name: "Investment Calculators",
@@ -35,6 +40,8 @@ export const categories: Category[] = [
     description:
       "Plan your investments, retirement, and calculate compound interest growth.",
     icon: "📈",
+    longDescription:
+      "Building wealth takes time, and compound interest is your most powerful ally. Our investment calculators show you how regular contributions grow over the years, how different rates of return impact your portfolio, and how much you need to save each month to reach your retirement goals. Whether you're just starting to invest in your 20s or fine-tuning your retirement plan in your 50s, these tools model real-world scenarios including inflation, contribution increases, and varying compounding frequencies. See the dramatic difference that starting early or increasing your savings rate by just 1% can make over decades.",
   },
   {
     name: "Tax Calculators",
@@ -42,6 +49,8 @@ export const categories: Category[] = [
     description:
       "Estimate income tax, paycheck deductions, capital gains, and more.",
     icon: "🧾",
+    longDescription:
+      "Understanding your tax burden is essential for financial planning. Our tax calculators use the latest federal tax brackets to estimate your income tax liability, help you understand how deductions and filing status affect what you owe, and break down your paycheck so you can see exactly where your money goes. Use the income tax calculator to compare different scenarios — like the impact of a raise, a side hustle, or contributing more to your 401(k). The paycheck calculator shows your net take-home pay after federal tax, state tax, Social Security, Medicare, and retirement contributions.",
   },
   {
     name: "Business Calculators",
@@ -49,6 +58,8 @@ export const categories: Category[] = [
     description:
       "Calculate profit margins, ROI, break-even points, and business metrics.",
     icon: "💼",
+    longDescription:
+      "Running a successful business means knowing your numbers. Our business calculators help entrepreneurs, small business owners, and managers make data-driven decisions. Calculate your gross and net profit margins to understand pricing strategy, use the ROI calculator to evaluate potential investments or marketing campaigns, and model different scenarios to find your break-even point. These tools are designed to give you quick, accurate answers so you can focus on growing your business rather than crunching numbers in a spreadsheet.",
   },
   {
     name: "Everyday Calculators",
@@ -56,6 +67,8 @@ export const categories: Category[] = [
     description:
       "Tip calculators, percentage calculators, salary converters, and more.",
     icon: "🔢",
+    longDescription:
+      "Not every calculation involves major financial decisions, but accuracy still matters. Our everyday calculators handle the math you encounter in daily life — from splitting a restaurant bill and calculating the right tip, to converting an hourly wage into an annual salary, to quickly finding percentages for discounts or markups. The BMI calculator helps you understand your body mass index category, while the percentage calculator handles three common scenarios: finding a percentage of a number, figuring out what percentage one number is of another, and calculating percent change between two values.",
   },
 ];
 

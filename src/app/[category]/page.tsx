@@ -40,9 +40,7 @@ export default async function CategoryPage({ params }: { params: Params }) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumbs items={[{ name: cat.name }]} />
 
-      <AdUnit slot="category-top" format="horizontal" />
-
-      <div className="text-center mb-10">
+      <div className="text-center mb-8">
         <div className="text-5xl mb-4">{cat.icon}</div>
         <h1 className="text-3xl sm:text-4xl font-bold text-[var(--color-primary)] mb-3">
           {cat.name}
@@ -51,6 +49,18 @@ export default async function CategoryPage({ params }: { params: Params }) {
           {cat.description}
         </p>
       </div>
+
+      {cat.longDescription && (
+        <div className="bg-white rounded-xl shadow-sm border border-[var(--color-border)] p-6 sm:p-8 mb-10 max-w-3xl mx-auto">
+          <p className="text-[var(--color-text)] leading-relaxed">
+            {cat.longDescription}
+          </p>
+        </div>
+      )}
+
+      <h2 className="text-xl font-bold text-[var(--color-text)] mb-6 text-center">
+        Choose a Calculator
+      </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
         {calcs.map((calc) => (

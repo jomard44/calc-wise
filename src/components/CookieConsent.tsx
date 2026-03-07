@@ -14,11 +14,13 @@ export default function CookieConsent() {
 
   const accept = () => {
     localStorage.setItem("calcwise-cookie-consent", "accepted");
+    window.dispatchEvent(new Event("cookie-consent-change"));
     setShow(false);
   };
 
   const decline = () => {
     localStorage.setItem("calcwise-cookie-consent", "declined");
+    window.dispatchEvent(new Event("cookie-consent-change"));
     setShow(false);
   };
 
